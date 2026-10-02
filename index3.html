@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annoy My Elder Sister 💀</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #ffd6e7, #d9c7ff);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 92%;
+        max-width: 500px;
+        background: rgba(255,255,255,0.9);
+        border-radius: 30px;
+        padding: 30px 22px;
+        text-align: center;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        color: #666;
+        margin-bottom: 25px;
+    }
+
+    .buttons {
+        display: grid;
+        gap: 13px;
+    }
+
+    button {
+        border: none;
+        padding: 15px;
+        border-radius: 18px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        background: #ff8fbd;
+        color: white;
+        transition: 0.2s;
+    }
+
+    button:hover {
+        transform: scale(1.04);
+        background: #ff6eaa;
+    }
+
+    #message {
+        min-height: 70px;
+        margin-top: 22px;
+        padding: 18px;
+        border-radius: 18px;
+        background: #fff0f7;
+        font-weight: bold;
+        color: #444;
+    }
+
+    .heart {
+        position: fixed;
+        font-size: 25px;
+        animation: float 2s linear forwards;
+        pointer-events: none;
+    }
+
+    @keyframes float {
+        from {
+            transform: translateY(0) rotate(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateY(-500px) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    #noBtn {
+        position: relative;
+    }
+
+    .shake {
+        animation: shake 0.4s;
+    }
+
+    @keyframes shake {
+        0%,100% { transform: translateX(0); }
+        25% { transform: translateX(-10px); }
+        75% { transform: translateX(10px); }
+    }
+
+    .final {
+        margin-top: 20px;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>💀 HELLO, AKKA 💀</h1>
+
+    <p class="subtitle">
+        Welcome to the completely unnecessary<br>
+        <b>“Annoy My Elder Sister”</b> website.
+    </p>
+
+    <div class="buttons">
+
+        <button onclick="dontClick()">
+            🚨 DON'T CLICK THIS
+        </button>
+
+        <button onclick="compliment()">
+            😇 Give Me A Compliment
+        </button>
+
+        <button onclick="annoy()">
+            🐸 ANNOY ME
+        </button>
+
+        <button onclick="chocolate()">
+            🍫 Give Me Chocolate
+        </button>
+
+        <button onclick="question()">
+            🤨 Am I Your Favourite?
+        </button>
+
+        <button id="noBtn" onclick="noAnswer()">
+            ❌ NO
+        </button>
+
+        <button onclick="secret()">
+            🔐 SECRET BUTTON
+        </button>
+
+        <button onclick="finalMessage()">
+            🎁 FINAL SURPRISE
+        </button>
+
+    </div>
+
+    <div id="message">
+        👀 Choose a button, akka...
+    </div>
+
+</div>
+
+<script>
+
+function show(text) {
+    const box = document.getElementById("message");
+    box.innerHTML = text;
+
+    box.classList.remove("shake");
+    void box.offsetWidth;
+    box.classList.add("shake");
+}
+
+function dontClick() {
+    show("I TOLD YOU NOT TO CLICK IT 😭😭😭<br><br>Anyway... you clicked it.");
+}
+
+function compliment() {
+    const compliments = [
+        "You're actually pretty cool... sometimes. 😌",
+        "You're a great sister. Don't let this inflate your ego.",
+        "10/10 sister. 11/10 at annoying me though 💀",
+        "You're beautiful. Now give me chocolate.",
+        "You're my favourite elder sister. Because you're my only one. 😭"
+    ];
+
+    show(compliments[Math.floor(Math.random() * compliments.length)]);
+}
+
+function annoy() {
+    const messages = [
+        "AKKAAAAAAA 😭",
+        "Akka akka akka akka akka akka",
+        "I have absolutely nothing to say. Bye.",
+        "Look behind you 👀",
+        "Can I have ₹100?",
+        "AKKA. AKKA. AKKA.",
+        "I'm bored. Entertain me.",
+        "Why are you ignoring me 😭"
+    ];
+
+    show(messages[Math.floor(Math.random() * messages.length)]);
+
+    createHearts();
+}
+
+function chocolate() {
+    show("🍫 Chocolate detected as necessary for sister survival.<br><br>I'll be waiting. 😌");
+}
+
+function question() {
+    show("Obviously I'm your favourite sibling. 😌<br><br>Don't answer. I already decided.");
+}
+
+function noAnswer() {
+    const btn = document.getElementById("noBtn");
+
+    btn.style.transform =
+        `translate(${Math.random()*180-90}px, ${Math.random()*100-50}px)`;
+
+    show("HAHAHAHA YOU CAN'T SAY NO 😭💀");
+}
+
+function secret() {
+    show("🤫 SECRET REVEALED:<br><br>You have been officially diagnosed with...<br><br><b>ELDER SISTER SYNDROME.</b> 💀");
+}
+
+function finalMessage() {
+    show(`
+        🎉 CONGRATULATIONS 🎉<br><br>
+        You successfully wasted several seconds of your life
+        on your annoying little sibling's website. 😭<br><br>
+        But seriously...<br>
+        ❤️ Love you, akka ❤️<br><br>
+        Now go away.
+    `);
+
+    createHearts();
+}
+
+function createHearts() {
+    for(let i = 0; i < 12; i++) {
+        const heart = document.createElement("div");
+
+        heart.className = "heart";
+        heart.innerHTML = ["❤️","💗","💀","😭","✨"][Math.floor(Math.random()*5)];
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.bottom = "0px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 2000);
+    }
+}
+
+</script>
+
+</body>
+</html>
